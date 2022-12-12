@@ -1,0 +1,24 @@
+# permissions for end users to edit mesos.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: mesos-editor-role
+rules:
+- apiGroups:
+  - my.domain
+  resources:
+  - mesos
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - my.domain
+  resources:
+  - mesos/status
+  verbs:
+  - get

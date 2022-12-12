@@ -1,0 +1,7 @@
+apiVersion: my.domain/v1alpha1
+kind: Mesos
+metadata:
+  name: mesos-sample
+spec:
+  workers: 2
+  # Add fields here
